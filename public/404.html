@@ -9,7 +9,7 @@
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1).join('/') +
+        l.pathname.split('/').slice(0, 2).join('/') +
         '/?p=' + encodeURIComponent(l.pathname + l.search) +
         (l.hash ? '&h=' + encodeURIComponent(l.hash) : '')
       );
