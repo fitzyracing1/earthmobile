@@ -1,0 +1,52 @@
+{
+  "name": "Subscriber",
+  "type": "object",
+  "properties": {
+    "phone": {
+      "type": "string",
+      "description": "Phone number in E.164 format e.g. +15551234567"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "opted_out"
+      ],
+      "default": "pending",
+      "description": "SMS opt-in status"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "ios",
+        "android"
+      ],
+      "description": "Device platform for push routing"
+    },
+    "device_token": {
+      "type": "string",
+      "description": "APNs device token (iOS) or FCM registration token (Android)"
+    },
+    "home_lat": {
+      "type": "number",
+      "description": "User home latitude"
+    },
+    "home_lng": {
+      "type": "number",
+      "description": "User home longitude"
+    },
+    "last_push_at": {
+      "type": "string",
+      "description": "ISO timestamp of last push sent"
+    },
+    "push_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Total pushes delivered"
+    }
+  },
+  "required": [
+    "phone"
+  ]
+}

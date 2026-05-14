@@ -28,7 +28,7 @@ export default function Home() {
         background: "#0d0f12",
       }}>
         <div>
-          <div style={{ fontSize: 9, letterSpacing: 5, color: "#4b5563" }}>NUDGE</div>
+          <div style={{ fontSize: 9, letterSpacing: 5, color: "#4b5563" }}>EARTH</div>
           <div style={{ fontSize: 15, fontWeight: 700, color: "#f9fafb", letterSpacing: 1 }}>Drive Reminder</div>
         </div>
         <a href="#waitlist" style={{
@@ -172,7 +172,7 @@ export default function Home() {
             gap: 32,
           }}>
             {[
-              { step: "01", icon: "💬", title: "Text the number", body: "Send any message to the Nudge number. We reply with a quick opt-in confirmation." },
+              { step: "01", icon: "💬", title: "Text the number", body: "Send any message to the Earth number. We reply with a quick opt-in confirmation." },
               { step: "02", icon: "✅", title: "Reply YES", body: "One reply confirms you in. No app, no password, no account creation required." },
               { step: "03", icon: "📍", title: "Tell us your spots", body: "Reply with places you visit regularly — grocery, gym, pharmacy, coffee." },
               { step: "04", icon: "🔔", title: "Get nudged", body: "We monitor live traffic and send push alerts at exactly the right moment to leave." },
@@ -229,7 +229,7 @@ export default function Home() {
               }}>🗺️</div>
               <div style={{ flex: 1 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 4 }}>
-                  <div style={{ fontSize: 9, color: "#4b5563", letterSpacing: 2 }}>NUDGE {n.icon}</div>
+                  <div style={{ fontSize: 9, color: "#4b5563", letterSpacing: 2 }}>EARTH {n.icon}</div>
                   <div style={{ fontSize: 10, color: "#374151" }}>{n.time}</div>
                 </div>
                 <div style={{
@@ -334,7 +334,7 @@ export default function Home() {
         color: "#374151",
         letterSpacing: 1,
       }}>
-        <div>NUDGE © 2026</div>
+        <div>EARTH © 2026</div>
         <div>DRIVE SMARTER · ARRIVE ON TIME</div>
       </footer>
 
