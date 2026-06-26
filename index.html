@@ -46,7 +46,7 @@ if (window.self === window.top) {
     const pageName = getPageNameFromPath(path) || "home";
     const appId = "";
     if (!appId) return;
-    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+    fetch(`/api/app-logs/${appId}/log-user-in-app/${pageName}`, {
       method: "POST",
     }).catch(() => {});
   }
