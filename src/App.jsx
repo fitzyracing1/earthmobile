@@ -7,6 +7,12 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 // Add page imports here
 import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import SubscriberList from "./pages/SubscriberList";
+import SubscriberDetails from "./pages/SubscriberDetails";
+import ServiceSettings from "./pages/ServiceSettings";
+import NotificationLog from "./pages/NotificationLog";
+import AdminLayout from "./components/AdminLayout";
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -36,6 +42,13 @@ const AuthenticatedApp = () => {
     <Routes>
       {/* Add your page Route elements here */}
       <Route path="/" element={<Home />} />
+      <Route element={<AdminLayout />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/subscribers" element={<SubscriberList />} />
+        <Route path="/subscriber-details" element={<SubscriberDetails />} />
+        <Route path="/settings" element={<ServiceSettings />} />
+        <Route path="/notification-log" element={<NotificationLog />} />
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
